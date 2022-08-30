@@ -587,9 +587,6 @@ aside .container .image img {
   margin-bottom: 60px;
 }
 
-.portfolio .container .action li {
-}
-
 .portfolio .container .action li a{
   font-size: var(--secondry-title);
   padding: 10px 20px;
@@ -605,10 +602,15 @@ aside .container .image img {
   color: white;
 }
 
-
 .photos_title {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+}
+
+@media (max-width:1010px) {
+  .photos_title {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
 }
 
 .photos_title .coll {
@@ -653,6 +655,25 @@ aside .container .image img {
   color: var(--main-color);
 }
 
+@media (max-width: 554px) {
+  .portfolio .container .action li a {
+    font-size: 12px;
+    padding: 2px 4px;
+  }
+
+  .photos_title .coll .text {
+    padding: 15px;
+  }
+
+  .photos_title .text h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .photos_title .coll .text p {
+    font-size: 13px;
+  }
+}
 
 
 /* End portfolio */
