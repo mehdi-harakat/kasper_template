@@ -7,6 +7,7 @@
   --secondry-title: 18px;
   --small-size: 15px;
   --more-small: 14px;
+  --main-padding: 100px;
 }
 
 /* start rules */
@@ -172,7 +173,7 @@ header ul li::before {
     border-right: none;
     padding: 0;
     z-index: 500;
-    background-color: #474747ea;
+    background-color: #474747;
   }
 
   header ul li::before {
@@ -332,6 +333,9 @@ header .list i {
   border: none;
 }
 
+/* end landing */
+
+/* ------------------------------------------------------------------ */
 
 /* start component*/
 
@@ -390,12 +394,17 @@ header .list i {
   line-height: 2;
   color: #A8A8A8; 
 }
+
+/* end component */
+
+/* --------------------------------------------------------------------- */
+
 /* start section  */
 
 
 section {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
 }
 
 section .all {
@@ -430,8 +439,7 @@ section .all .card .text h3 {
 
 section .all .card .text p {
   font-size: var(--more-small);
-  line-height: 1.5;
-  width: 80%;
+  line-height: 2;
   color: var(--secondry-color);
 }
 
@@ -451,6 +459,10 @@ section .all .card .text p {
     margin: 0 auto;
   }
 }
+
+/* end section */
+
+/* ---------------------------------------------------------------------------- */
 
 /* Start Aside */
 
@@ -575,8 +587,8 @@ aside .container .image img {
 /* Start portfolio */
 
 .portfolio {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
 }
 
 .portfolio .container .action {
@@ -605,6 +617,7 @@ aside .container .image img {
 .photos_title {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+  margin-bottom: 50px;
 }
 
 @media (max-width:1010px) {
@@ -675,5 +688,240 @@ aside .container .image img {
   }
 }
 
+.portfolio .more {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 150px;
+}
+
+.portfolio .more span a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: var(--main-color);
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: var(--secondry-title);
+}
+
+.portfolio .content {
+  position: relative;
+}
+
+.portfolio .video {
+  position: relative;
+}
+
+.portfolio .video .vd{
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio .video::before {
+  content: '';
+  background-color: #000000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 99.5%;
+  opacity: 0.6;
+}
+
+.portfolio .content .text {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: var(--color-transperant);
+  padding: 60px 0;
+}
+.portfolio .content .text h4 {
+  color: white;
+  font-size: var(--larg-size);
+  font-weight: 400;
+  word-spacing: 4px;
+  margin-bottom: 25px;
+}
+
+.portfolio .content .text p {
+  color: white;
+  font-size: var(--secondry-title);
+  margin-bottom: 25px;
+}
+
+.portfolio .content .text button {
+  color: white;
+  background-color: var(--icons-color);
+  font-size: var(--secondry-title);
+  text-transform: uppercase;
+  border: none;
+  padding: 10px 25px;
+}
+
+@media (max-width: 700px) {
+  .portfolio .content .text {
+    padding: 30px 0;
+  }
+  .portfolio .content .text h4 {
+    font-size: var(--secondry-title);
+    word-spacing: 2px;
+    margin-bottom: 15px;
+  }
+  .portfolio .content .text p {
+    font-size: var(--small-size);
+    margin-bottom: 20px;
+  }
+  .portfolio .content .text button {
+    font-size: var(--small-size);
+    padding: 8px 15px;
+  }
+}
+
+@media (max-width: 300px) {
+  .portfolio .content .text h4 {
+    font-size: var(--small-size);
+    word-spacing: 1px;
+    margin-bottom: 10px;
+  }
+  .portfolio .content .text p {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  .portfolio .content .text button {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+}
 
 /* End portfolio */
+
+/* ------------------------------------------------------------------------- */
+
+/* start about us */
+
+.about_us .container {
+  position: relative;
+}
+
+.about_us .container .image {
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.about_us .container .image img {
+  position: absolute;
+  top: 0;
+  width: 70%;
+}
+
+.about_us .contnet_two .back_two {
+  background-image: 
+    linear-gradient(
+    rgb(0, 0, 0, 0.75),
+    rgb(0, 0, 0, 0.75)),
+    url(../photos/stats.png);
+  background-size: cover;
+  padding: var(--main-padding) 0;
+}
+
+.about_us .contnet_two .count {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 40px 0;
+  background-color: var(--color-transperant);
+}
+
+.about_us .contnet_two .count .card {
+  flex-basis: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about_us .count .card i {
+  color: white;
+  font-size: var(--larg-size);
+  margin-bottom: 20px;
+}
+.about_us  .count .card h4 {
+  color: white;
+  font-size: 50px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  letter-spacing: 3px;
+}
+.about_us  .count .card p {
+  color: white;
+  text-transform: capitalize;
+  font-size: var(--small-size);
+}
+
+@media (max-width: 991px) {
+  .about_us .container .image {
+    height: 180px;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .about_us .container .image {
+    height: 155px;
+  }
+
+  .about_us .contnet_two .count {
+    flex-wrap: wrap;
+    gap: 70px 0;
+  }
+
+  .about_us .contnet_two .count .card {
+    flex-basis: 45%;
+  }
+}
+
+
+
+@media (max-width: 600px) {
+  .about_us .container .image {
+    height: 80px;
+  }
+
+  .about_us .contnet_two .count .card {
+    flex-basis: 95%;
+  }
+
+
+  .about_us .count .card i {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  .about_us .count .card h4 {
+    color: white;
+    font-size: 35px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+  }
+
+  .about_us .count .card p {
+    color: white;
+    text-transform: capitalize;
+    font-size: 12px;
+  }
+}
+
+
+
+@media (max-width: 350px) {
+  .about_us .container .image {
+    height: 60px;
+  }
+}
+/* end about us */
