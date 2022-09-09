@@ -367,7 +367,8 @@ header .list i {
 
 .component .title h3::before {
   content: '';
-  border: 0.5px solid black;
+  background-color: black;
+  height: 1.5px;
   width: 80%;
   display: inline-block;
   position: absolute;
@@ -830,6 +831,7 @@ aside .container .image img {
     url(../photos/stats.png);
   background-size: cover;
   padding: var(--main-padding) 0;
+  margin-bottom: 50px;
 }
 
 .about_us .contnet_two .count {
@@ -890,7 +892,7 @@ aside .container .image img {
 
 @media (max-width: 600px) {
   .about_us .container .image {
-    height: 80px;
+    height: 100px;
   }
 
   .about_us .contnet_two .count .card {
@@ -919,9 +921,540 @@ aside .container .image img {
 
 
 
-@media (max-width: 350px) {
+@media (max-width: 430px) {
   .about_us .container .image {
-    height: 60px;
+    height: 100px;
+  }
+
+  .about_us .container .image img {
+    top: 0;
+    width: 95%;
   }
 }
+
+@media (max-width: 300px) {
+  .about_us .container .image {
+    height: 70px;
+  }
+}
+
+
+/* start level */
+
+.level {
+  margin-bottom: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.level .label{
+  font-size: var(--small-size);
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.level .action{
+  position: relative;
+  background-color: #c2c1c1;
+}
+
+.level .action .hello{
+  background-color: var(--main-color);
+  height: 25px;
+}
+
+.level .action .hello span{
+  padding: 6px 10px;
+  background-color: #333;
+  color: white;
+  position: absolute;
+  top: -45px;
+  display: inline-block;
+  border-radius: 5px;
+  font-size: var(--more-small);
+}
+
+.level .action .hello span::before {
+  content: "";
+  border-width: 6px;
+  border-style: solid;
+  border-color: #333 transparent transparent;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+.level .action .one {
+  width: 95%;
+}
+
+.level .action .hello .span_one {
+  left: calc(95% - 25.75px);
+}
+
+.level .action .two {
+  width: 90%;
+}
+
+.level .action .hello .span_two {
+  left: calc(90% - 25.75px);
+}
+
+.level .action .three {
+  width: 85%;
+}
+
+.level .action .hello .span_three {
+  left: calc(85% - 25.75px);
+}
+
+.level .action .four {
+  width: 88%;
+}
+
+.level .action .hello .span_four {
+  left: calc(88% - 25.75px);
+}
+
+/* end level */
+
+.about_us .contnet_two > .container {
+  padding-bottom: 60px;
+}
+
+.about_us .contnet_two .taken {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about_us .contnet_two .taken .test {
+  width: 45%;
+  position: relative;
+}
+
+.about_us .contnet_two .taken .text_same {
+  margin-bottom: 60px;
+}
+
+.about_us .contnet_two .taken .text_same h4 {
+  text-align: center;
+  font-size: var(--secondry-title);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.about_us .contnet_two .taken .text_same p {
+width: 80%;
+text-align: center;
+margin: 0 auto;
+font-size: var(--more-small);
+line-height: 1.8;
+color: var(--secondry-color);
+}
+
+.about_us .contnet_two .taken .test .mask {
+}
+
+.about_us .contnet_two .taken .test .mask .card{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.about_us .circels {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.about_us .circels span {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  border: 1.5px solid var(--secondry-color);
+  border-radius: 50%;
+  margin: 0 2px;
+}
+
+.about_us .circels span:nth-child(2) {
+  background-color: var(--main-color);
+  border: none;
+}
+
+.about_us .contnet_two .taken .test .mask .card .image_about {
+  border-radius: 100%;
+  background-color: black;
+  width: 90px;height: 90px;
+  overflow: hidden;
+  margin-left: 15px;
+}
+
+.about_us .contnet_two .taken .test .mask .card .image_about img {
+  height: 100%;
+}
+
+.about_us .contnet_two .taken .test .mask .card .para {
+  width: 65%;
+}
+
+.about_us .contnet_two .taken .test .mask .card .para p {
+font-size: 16px;
+line-height: 1.6;
+margin-bottom: 20px;
+}
+.about_us .contnet_two .taken .test .mask .card .para span {
+color: var(--secondry-color);
+font-size: var(--more-small);
+text-align: right;
+display: block;
+margin-bottom: 10px;
+}
+
+.about_us .contnet_two .taken .skills {
+width: 45%;
+}
+
+
+@media (max-width: 767px) {
+  .about_us .contnet_two .taken .test {
+    width: 90%;
+    margin-bottom: 80px;
+  }
+  .about_us .contnet_two .taken {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about_us .contnet_two .taken .skills {
+    width: 80%;
+  }
+}
+
+@media (max-width: 520px) {
+  .level .action .hello {
+    height: 16px;
+  }
+
+  .level .action .hello span {
+    
+font-size: 12px;
+    
+padding: 3px 5px;
+    
+top: -35px;
+  }
+
+  .about_us .contnet_two .taken .text_same h4 {
+    font-size: 16px;
+  }
+
+  .about_us .contnet_two .taken .text_same p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .about_us .contnet_two .taken .test .mask .card {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .about_us .contnet_two .taken .test .mask .card .para {
+    text-align: center;
+  }
+
+  .about_us .contnet_two .taken .test .mask .card .para span {
+    text-align: center;
+  }
+
+  .about_us .contnet_two .taken .test .mask .card .image_about {
+    margin-left: 0;
+  }
+
+  .about_us .contnet_two .taken .skills {
+    width: 80%;
+  }
+
+  /* start media level */
+  .level .action .hello .span_one {
+    left: calc(95% - 16.83px);
+  }
+  
+  .level .action .hello .span_two {
+    left: calc(90% - 16.83px);
+  }
+
+  .level .action .hello .span_three {
+    left: calc(85% - 16.83px);
+  }
+
+  .level .action .hello .span_four {
+    left: calc(88% - 16.83px);
+  }
+  /* end media-level */
+}
+
+.about_us .contnet_two .back_three {
+  background-image: linear-gradient(
+    rgb(0, 0, 0, 0.7),
+    rgb(0, 0, 0, 0.7)),
+    url("../photos/quote.jpg");
+  background-size: cover;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin-bottom: 60px;
+}
+
+.about_us .contnet_two .back_three .text_john h4 {
+color: white;
+font-size: var(--larg-size);
+font-weight: 400;
+text-align: center;
+line-height: 1.6;
+margin-bottom: 15px;
+}
+
+.about_us .contnet_two .back_three .text_john p {
+color: white;
+text-align: center;
+}
+
+@media (max-width: 520px) {
+  .about_us .contnet_two .back_three .text_john h4 {
+    font-size: var(--secondry-title);
+  }
+  .about_us .contnet_two .back_three .text_john p {
+    font-size: var(--more-small);
+  }
+}
+
 /* end about us */
+
+/* ------------------------------------------------------------------------------ */
+
+/* start pricing */
+
+.pricing {
+  padding-top: 30px;
+  padding-bottom: 100px;
+}
+
+.pricing .plan {
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.pricing .plan .card_price {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 80px;
+  background-color: #fcfcfc;
+}
+
+.pricing .plan .card_price .text_price {
+  border-top: 1px solid var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+  padding: 30px;
+}
+
+.pricing .plan .card_price .text_price h3 {
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.pricing .plan .card_price .text_price span {
+  width: 200px;
+  display: block;
+  text-align: center;
+  font-size: 60px;
+  font-weight: 700;
+  position: relative;
+  margin: 0 auto;
+}
+
+.pricing .plan .card_price .text_price span::before {
+  content: "$";
+  font-size: 24px;
+  font-weight: 400;
+  position: absolute;
+  top: -10px;
+  left: 44px;
+}
+
+.pricing .plan .card_price .text_price span::after {
+  content:'/Mo';
+  font-size: 20px;
+  font-weight: 700;
+  position: absolute;
+  bottom: 5px;
+  right: 15px;
+}
+
+
+.pricing .plan .card_price .features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid var(--main-color);
+  margin-bottom: 30px;
+}
+
+.pricing .plan .card_price .features p {
+  padding: 20px 0;
+  width: 145px;
+  text-align: center;
+  cursor: context-menu;
+  text-transform: capitalize;
+}
+
+.pricing .plan .card_price .features p:not(p:last-child) {
+  border-bottom: 1px solid var(--main-color);
+}
+
+
+.pricing .plan .card_price .button .buy {
+  text-transform: capitalize;
+  display: block;
+  background-color: white;
+  border: 1px solid var(--main-color);
+  padding: 16px;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: 0.5s all ease;
+}
+
+.pricing .plan .card_price .button .buy:hover {
+  background-color: var(--main-color);
+  border: 1px solid #00c5fc00;
+  color: white;
+}
+
+.pricing .contact_us {
+  margin-bottom: 100px;
+}
+
+.pricing .contact_us h4 {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 22px;
+}
+
+.pricing .contact_us .conta {
+  display: block;
+  margin: 0 auto;
+  border: none;
+  color: white;
+  background-color: var(--main-color);
+  padding: 16px 20px;
+  font-size: var(--secondry-title);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+@media (max-width:500px) {
+  .pricing .contact_us h4 {
+    font-size: 16px;
+  }
+
+  .pricing .contact_us .conta {
+    font-size: 15px;
+    padding: 10px 12px;
+  }
+}
+
+
+.pricing .earth {
+  background-image: linear-gradient(
+    rgb(0, 0, 0, 0.5),
+    rgb(0, 0, 0, 0.5)),
+    url('../photos/subscribe.jpg');
+  background-size: cover;
+  padding: 100px 0;
+}
+
+.pricing .earth .holder {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.pricing .earth .holder .email {
+  display: flex;
+  margin-right: 45px;
+  border: 1px solid white;
+  position: relative;
+  width: 700px;
+  min-width: 280px;
+}
+
+.pricing .earth .holder .email i {
+  position: absolute;
+  color: white;
+  font-size: 22px;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+}
+
+.pricing .earth .holder .email input[type="email"] {
+  width: calc(100% - 110px);
+  height: 60px;
+  background-color: transparent;
+  border: none;
+  padding-left: 55px;
+  caret-color: var(--main-color);
+  color: white;
+}
+
+.pricing .earth .holder .email input::placeholder{
+  text-transform: capitalize;
+  color: #ffffff5d;
+  font-size: var(--secondry-title);
+}
+
+.pricing .earth .holder .email input:focus {
+  outline: none;
+}
+
+.pricing .earth .holder .email .subscribe {
+  width: 110px;
+  background-color: var(--main-color);
+  border: none;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.pricing .earth .holder p {
+  color: white;
+  line-height: 1.8;
+  letter-spacing: 0.2px;
+  font-size: var(--secondry-title);
+}
+
+@media (max-width: 991px) {
+  .pricing .earth .holder {
+    flex-direction: column;
+  }
+
+  .pricing .earth .holder .email {
+    margin-bottom: 30px;
+    margin-right: 0;
+    width: 90%;
+  }
+
+  .pricing .earth .holder p {
+    text-align: center;
+    width: 80%;
+  }
+}
+
+/* end pricing */
