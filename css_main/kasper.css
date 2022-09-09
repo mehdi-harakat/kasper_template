@@ -358,7 +358,7 @@ header .list i {
 
 .component .title h3 {
   text-align: center;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 500;
   margin-bottom: 30px;
   position: relative;
@@ -391,9 +391,9 @@ header .list i {
 .component p {
   text-align: center;
   width: 500px;
-  font-size: var(--more-small);
+  font-size: var(--small-size);
   line-height: 2;
-  color: #A8A8A8; 
+  color: #A8A8A8;
 }
 
 /* end component */
@@ -1458,3 +1458,192 @@ text-align: center;
 }
 
 /* end pricing */
+
+/* ------------------------------------------------------------------------------------------------- */
+
+/* start contact us */
+
+.contact_us {
+  padding-bottom: 100px;
+}
+
+.contact_us .container .holder_contact {
+  display: flex;
+  gap: 0 50px;
+}
+
+.contact_us .container .holder_contact .contact {
+  display: flex;
+  flex-direction: column;
+  gap: 30px 0;
+  width: 75%;
+}
+
+.contact_us .holder_contact .contact input {
+  height: 60px;
+}
+
+.contact_us .holder_contact .contact textarea {
+  height: 200px;
+}
+
+.contact_us .holder_contact .contact textarea,
+.contact_us .holder_contact .contact input {
+  border: 1px solid #cccccc;
+  padding: 25px;
+}
+.contact_us .holder_contact .contact textarea:focus,
+.contact_us .holder_contact .contact input:focus {
+  outline: none;
+}
+
+.contact_us .holder_contact .contact .button_holder{
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.contact_us .holder_contact .contact .send {
+  display: block;
+  width: fit-content;
+  text-transform: uppercase;
+  padding: 22px 16px;
+  background-color: var(--main-color);
+  border: none;
+  color: white;
+}
+
+.contact_us .holder_contact .holder_text {
+  display: flex;
+  flex-direction: column;
+  gap: 80px 0;
+}
+
+.contact_us .holder_contact .holder_text .get h4 {
+  text-transform: capitalize;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.contact_us .holder_contact .holder_text .get p {
+  margin-bottom: 10px;
+  font-size: var(--small-size);
+  color: var(--secondry-color);
+}
+
+.contact_us .holder_contact .holder_text .get:last-child p {
+  font-style: italic;
+}
+
+@media (max-width: 767px) {
+  .contact_us .container .holder_contact {
+    align-items: center;
+    flex-direction: column-reverse;
+    gap: 50px;
+  }
+
+  .contact_us .holder_contact .holder_text {
+    gap: 40px;
+  }
+
+  .contact_us .holder_contact .holder_text .get h4 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .contact_us .holder_contact .holder_text .get p {
+    text-align: center;
+    font-style: normal ;
+  }
+  .contact_us .holder_contact .holder_text .get:last-child p {
+    font-style: normal ;
+  }
+
+  .contact_us .container .holder_contact .contact {
+    width: 100%;
+  }
+}
+
+/* end contact us */
+
+/* -------------------------------------------------------------------------------------- */
+
+/* start footer */
+
+footer {
+  background-image: linear-gradient(
+    rgb(0, 0, 0, 0.7),
+    rgb(0, 0, 0, 0.7)),
+    url('../photos/subscribe.jpg');
+  background-size: cover;
+  padding: 60px 0;
+}
+
+footer .holder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer .holder .social {
+  padding: 30px;
+}
+
+footer .holder .social h4 {
+  color: white;
+  font-size: 26px;
+  font-weight: 400;
+  padding: 30px;
+  text-transform: uppercase;
+  border-bottom: 1px solid white;
+}
+
+footer .holder .social .icons_footer{
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+footer .holder .social .icons_footer i {
+  display: inline-block;
+  color: white;
+  font-size: var(--secondry-title);
+  margin: 0 14px;
+  transform: scale(1);
+  transition: 0.2s all ease;
+}
+
+footer .holder .social .icons_footer i:hover {
+  color: var(--main-color);
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+footer .holder .finish {
+  padding: 10px;
+}
+
+footer .holder .finish p {
+  color: white;
+  text-transform: capitalize;
+  font-size: var(--secondry-title);
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+footer .holder .finish p span {
+  color: var(--main-color);
+}
+
+@media (max-width: 300px) {
+  footer .holder .social h4{
+    font-size: 22px;
+  }
+
+  footer .holder .finish p {
+    font-size: 14px;
+  }
+}
+
+/* end footer */
